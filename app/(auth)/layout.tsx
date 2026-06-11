@@ -3,6 +3,8 @@ import Image from "next/image";
 import { getCurrentUser } from "@/lib/actions/user.actions";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   try {
     const currentUser = await getCurrentUser();
